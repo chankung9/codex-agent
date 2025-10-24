@@ -18,6 +18,9 @@ plan:
          - `codex/auto` → for automated commits
       4. Commit initial structure and push.
     output: "Initialization report and folder tree confirmation"
+    meta:
+      branch: dev
+      auto_commit_branch: codex/auto
 
   - id: create_hello_agent_link
     description: "Link hello-agent repo as first sandbox service"
