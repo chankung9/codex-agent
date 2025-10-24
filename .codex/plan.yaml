@@ -1,4 +1,29 @@
 version: 1
 plan:
-  - id: init
-    description: placeholder plan
+  - id: bootstrap_codex_agent_system
+    description: "Setup full Codex-Agent organization environment and branches"
+    agent: engineer
+    prompt: |
+      Initialize Codex-Agent organization base structure with the following:
+      1. Create directories:
+         - .codex/, agents/, docs/, workspace/, audit/, reports/, finance/
+      2. Create default files:
+         - README.md (executive overview)
+         - docs/ORG_DESIGN.md (imported from provided design)
+         - .codex/plan.yaml (sample plan below)
+         - agents/product/prompt.md, agents/engineer/prompt.md, agents/hr/prompt.md
+      3. Initialize Git branches:
+         - `main` → stable
+         - `dev` → development
+         - `codex/auto` → for automated commits
+      4. Commit initial structure and push.
+    output: "Initialization report and folder tree confirmation"
+
+  - id: create_hello_agent_link
+    description: "Link hello-agent repo as first sandbox service"
+    agent: engineer
+    prompt: |
+      Configure integration between codex-agent and hello-agent:
+      - Add entry to docs/PROJECTS.md linking hello-agent as sandbox
+      - Prepare plan to generate MVP_PLAN.md in hello-agent/docs/
+    output: "docs/PROJECTS.md"
