@@ -1,14 +1,26 @@
-# Integration: hello-agent
+# Integration Record: hello-agent
 
-## Summary
-- **Purpose:** Sandbox and development testbed for Codex-Agent orchestration, validating manual handoff between ChatGPT Workspace and Codex.
-- **Repository:** https://github.com/chankung9/hello-agent
-- **Owner:** engineer_agent
+**Linked Project:** hello-agent  
+**Repository:** [https://github.com/chankung9/hello-agent](https://github.com/chankung9/hello-agent)
 
-## Integration Checklist
-1. **Plan sync:** `.codex/plan.yaml` references hello-agent deliverables and handoffs.
-2. **Report flow:** Any findings or status updates feed back into `reports/` and reference this integration note.
-3. **Workspace link:** Engineering tasks that affect hello-agent track their artifacts inside `workspace/` before mirroring changes upstream.
+---
 
-## Next Step
-- Prepare a plan to generate `docs/MVP_PLAN.md` inside the hello-agent repository, covering scope, stakeholders, and validation criteria.
+## Integration Summary
+
+This integration validates the connection between `codex-agent` (HQ) and `hello-agent` (sandbox).  
+It ensures that communication protocols, registry updates, and document syncs work as intended.
+
+### Integration Checklist
+
+- [x] Project registered in `docs/PROJECTS.md`
+- [x] Agent personas (product, engineer, hr) initialized
+- [ ] End-to-end document sync tested
+- [ ] Automated reporting pipeline verified
+
+---
+
+### Next Steps
+
+1. Engineer agent: implement MVP plan in `hello-agent/docs/MVP_PLAN.md`
+2. Product agent: review progress weekly
+3. HR agent: include in performance tracking report
