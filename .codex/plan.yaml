@@ -22,11 +22,49 @@ plan:
       branch: dev
       auto_commit_branch: codex/auto
 
+  # -----------------------------------------------------
+  # NEW STEP: Project Registration
+  # -----------------------------------------------------
+  - id: register_project
+    description: "Register a new project in the organization registry"
+    agent: product
+    prompt: |
+      Create or update docs/PROJECTS.md with the following entry:
+      - name: hello-agent
+      - purpose: Sandbox and development testbed for Codex-Agent orchestration
+      - owner: engineer_agent
+      - repo: https://github.com/chankung9/hello-agent
+      - status: active
+      - notes: Used to validate manual handoff between ChatGPT Workspace and Codex.
+
+      Make sure PROJECTS.md includes a header section describing the registry format, e.g.:
+      ```
+      # Project Registry
+      Each entry defines a project integrated with the Codex-Agent organization.
+      Fields: name, purpose, owner, repo, status, notes
+      ```
+    output: "docs/PROJECTS.md"
+    meta:
+      branch: dev
+      auto_commit_branch: codex/auto
+
+  # -----------------------------------------------------
+  # UPDATED STEP: Integration Setup
+  # -----------------------------------------------------
   - id: create_hello_agent_link
+    depends_on: register_project
     description: "Link hello-agent repo as first sandbox service"
     agent: engineer
     prompt: |
-      Configure integration between codex-agent and hello-agent:
-      - Add entry to docs/PROJECTS.md linking hello-agent as sandbox
-      - Prepare plan to generate MVP_PLAN.md in hello-agent/docs/
-    output: "docs/PROJECTS.md"
+      Using the entry defined in docs/PROJECTS.md, configure integration between codex-agent and hello-agent:
+      1. Confirm that project 'hello-agent' exists in the registry.
+      2. Generate an integration note file: docs/INTEGRATION_HELLO_AGENT.md
+      3. Include:
+         - Summary of hello-agent purpose and repository link
+         - Integration checklist (plan sync, report flow, workspace link)
+         - Next step: Prepare plan to generate MVP_PLAN.md in hello-agent/docs/
+      4. Commit the new file and update PROJECTS.md to include integration status.
+    output: "docs/INTEGRATION_HELLO_AGENT.md"
+    meta:
+      branch: dev
+      auto_commit_branch: codex/auto
