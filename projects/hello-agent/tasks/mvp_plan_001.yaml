@@ -1,0 +1,14 @@
+id: hello-agent-mvp-plan
+summary: Draft MVP plan covering scope, milestones, and owners for hello-agent
+owner: engineer_agent
+status: in_progress
+links:
+  - docs/INTEGRATION_HELLO_AGENT.md
+  - docs/deployments/HELLO_AGENT_MVP_DPD.md
+  - projects/hello-agent/README.md
+acceptance_criteria:
+  - MVP plan committed to hello-agent repo under docs/MVP_PLAN.md
+  - Product + HR agents record review sign-off
+  - Audit log updated with kickoff + approvals
+notes:
+  - Requires coordination with product, HR, and compliance to satisfy pipeline gates

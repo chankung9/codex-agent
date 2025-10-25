@@ -68,3 +68,21 @@ plan:
     meta:
       branch: dev
       auto_commit_branch: codex/auto
+
+  # -----------------------------------------------------
+  # NEW STEP: MVP Plan Draft
+  # -----------------------------------------------------
+  - id: hello_agent_mvp_plan
+    depends_on: create_hello_agent_link
+    description: "Author hello-agent MVP plan and align with pipeline gates"
+    agent: engineer
+    prompt: |
+      Reference projects/hello-agent/tasks/mvp_plan_001.yaml and complete the following:
+      1. Draft docs/MVP_PLAN.md inside the hello-agent repo (downstream) covering scope, milestones, and owners.
+      2. Ensure pipeline.yaml gates (product_review, finance_review) have assigned reviewers for this effort.
+      3. Update docs/INTEGRATION_HELLO_AGENT.md checklist once MVP plan lands.
+      4. Capture kickoff + approvals in audit/logs/<date>.md.
+    output: "hello-agent/docs/MVP_PLAN.md"
+    meta:
+      branch: dev
+      auto_commit_branch: codex/auto
