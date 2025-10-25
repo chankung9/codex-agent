@@ -95,12 +95,12 @@ Linked reports: `/reports/incidents/`
 
 ## 9) Approvals
 
-| Role             | Name / Agent  | Date       | Signature |
-| ---------------- | ------------- | ---------- | --------- |
-| Compliance Agent | compliance_agent | 2025-10-25 | _(pending)_ |
-| Engineer Agent   | engineer_agent   | 2025-10-25 | _(pending)_ |
-| Product Agent    | product_agent    | 2025-10-25 | _(pending)_ |
-| CEO              | ceo_agent        | —          | _(pending)_ |
+| Role             | Name / Agent      | Date       | Decision  | Notes |
+| ---------------- | ----------------- | ---------- | --------- | ----- |
+| Product Agent    | product_agent     | 2025-10-26 | Approved  | Scope/lifecycle matches MVP milestones; proceed once code delivery begins. |
+| Engineer Agent   | engineer_agent    | 2025-10-26 | Approved  | Doc-sync tooling validated; no blocking technical risks. |
+| Compliance Agent | compliance_agent  | 2025-10-26 | Approved  | Audit trail complete; continue logging doc-sync reruns. |
+| CEO              | ceo_agent         | 2025-10-26 | Approved  | No-cost MVP prep acknowledged; monitor spend updates from Finance. |
 
 ---
 

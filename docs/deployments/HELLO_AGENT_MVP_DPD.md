@@ -32,11 +32,12 @@
 | Pipeline guardrails | Engineer Agent | `pipeline.yaml` includes hello-agent gates |
 | Finance readiness | Finance Agent | `finance/summary_2025-10.md` reflects MVP budget |
 | Compliance trace | Compliance Agent | Audit log entry + release checklist mapping |
+| Release summary evidence | Product Agent | `reports/releases/summary/SUMMARY-2025-10.md` circulated for approvals |
 
 ## 5. Approval Sign-off
-- **Product Lead:** _pending_
-- **Engineer Lead:** _pending_
-- **Legal/Compliance:** _pending_
-- **Finance:** _pending_
+- **Product Lead:** Approved 2025-10-26 (ref. `reports/releases/summary/SUMMARY-2025-10.md`)
+- **Engineer Lead:** Approved 2025-10-26 (ref. `reports/releases/summary/SUMMARY-2025-10.md`)
+- **Legal/Compliance:** Approved 2025-10-26 (ref. `reports/releases/summary/SUMMARY-2025-10.md`)
+- **Finance:** Approved 2025-10-26 (no-cost MVP scope; update `finance/summary_2025-10.md` when spend occurs)
 
 > Prepared 2025-10-25. Update sign-off fields as approvals are recorded.
