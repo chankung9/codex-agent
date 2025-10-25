@@ -1,12 +1,12 @@
-# Incident Report Template — Codex-Agent Organization
-
+---
 version: 1.0
 created_at: YYYY-MM-DD
 updated_at: YYYY-MM-DD
 prepared_by: Engineer Agent
 approved_by: CTO / CEO
-
 ---
+
+# Incident Report Template — Codex-Agent Organization
 
 ## 1) Incident Summary
 

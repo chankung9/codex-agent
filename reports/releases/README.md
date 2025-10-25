@@ -1,13 +1,11 @@
-# Releases Directory — Codex-Agent Organization
-
 ---
-
 version: 1.1
 maintained_by: Engineer Agent
 approved_by: Product & Compliance Agents
 last_updated: YYYY-MM-DD
-
 ---
+
+# Releases Directory — Codex-Agent Organization
 
 # Releases Directory — Codex-Agent Organization
 

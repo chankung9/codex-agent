@@ -1,11 +1,11 @@
-# Policy Review Form — Codex-Agent Organization
-
-version: 1.0  
-maintained_by: Compliance Agent  
-approved_by: CEO  
-last_updated: YYYY-MM-DD
-
 ---
+version: 1.0
+maintained_by: Compliance Agent
+approved_by: CEO
+last_updated: YYYY-MM-DD
+---
+
+# Policy Review Form — Codex-Agent Organization
 
 ## 1) Review Information
 

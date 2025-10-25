@@ -1,11 +1,11 @@
-# Codex-Agent Organizational Policy
-
-version: 1.0  
-effective_date: YYYY-MM-DD  
-approved_by: CEO  
-last_reviewed: YYYY-MM-DD
-
 ---
+version: 1.0
+effective_date: YYYY-MM-DD
+approved_by: CEO
+last_reviewed: YYYY-MM-DD
+---
+
+# Codex-Agent Organizational Policy
 
 ## 1. Purpose
 

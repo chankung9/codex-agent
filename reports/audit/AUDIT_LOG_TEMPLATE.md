@@ -1,13 +1,13 @@
-header
-
-# Audit Log Template — Codex-Agent Organization
-
+---
 version: 1.0
 created_at: YYYY-MM-DD
 auditor: Compliance Agent
 approved_by: Legal / CEO
-
 ---
+
+header
+
+# Audit Log Template — Codex-Agent Organization
 
 ## 1) Audit Overview
 

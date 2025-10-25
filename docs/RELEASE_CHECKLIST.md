@@ -1,11 +1,11 @@
-# Release Checklist — Codex-Agent Organization
-
-version: 1.0  
-maintained_by: Engineer Agent  
-approved_by: Product Agent & Compliance Agent  
-last_updated: YYYY-MM-DD
-
 ---
+version: 1.0
+maintained_by: Engineer Agent
+approved_by: Product Agent & Compliance Agent
+last_updated: YYYY-MM-DD
+---
+
+# Release Checklist — Codex-Agent Organization
 
 ## 1) Release Metadata
 

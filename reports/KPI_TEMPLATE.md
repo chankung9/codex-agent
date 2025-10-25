@@ -1,9 +1,11 @@
-# Weekly KPI Report — Codex-Agent Organization
-
+---
 period: YYYY-MM-DD to YYYY-MM-DD
 prepared_by: HR Agent
 approved_by: CEO
 version: 1.0
+---
+
+# Weekly KPI Report — Codex-Agent Organization
 
 ## 1) Executive Summary
 
