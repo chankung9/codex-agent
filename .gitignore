@@ -1,0 +1,18 @@
+# Global
+.DS_Store
+Thumbs.db
+*.swp
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Rust build artifacts
+target/
+workspace/agent_router_rs/target/
+workspace/agent_router_rs/Cargo.lock
+
+# Tooling outputs
+.idea/
+.vscode/
+*.log
