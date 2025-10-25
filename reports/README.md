@@ -44,6 +44,12 @@ This directory contains all organizational reporting templates and generated rep
      - `/agents/` — responsible agents
      - `/projects/` — linked projects
 
+## hello-agent MVP Reporting Alignment
+
+- Finance + product reviewers must summarize MVP metrics using `reports/summary_TEMPLATE.md` before approvals.
+- Reference `projects/hello-agent/docs/MVP_PLAN.md` milestones in each summary to ensure cadence consistency.
+- When filing monthly updates, include links to audit entries documenting doc-sync tests and reporting sign-offs.
+
 ## Workflow Integration
 
 When automated workflows are enabled:

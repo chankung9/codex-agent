@@ -99,3 +99,11 @@ last_updated: YYYY-MM-DD
 > **Note:**  
 > Every release must be traceable through tags, logs, and reports.  
 > Attach this checklist to the final pull request or release summary before merge.
+
+---
+
+## Project-Specific Addendum — hello-agent MVP
+
+1. HR agent confirms performance tracking entry updated (reference `agents/hr/prompt.md` and relevant team docs).
+2. Compliance agent verifies doc-sync evidence recorded in `audit/logs/YYYY-MM-DD.md` and that `projects/hello-agent/docs/DOC_SYNC_CHECKLIST.md` was followed.
+3. Product & Finance agents ensure reporting summaries include links to `projects/hello-agent/docs/MVP_PLAN.md` and `reports/summary_TEMPLATE.md`.

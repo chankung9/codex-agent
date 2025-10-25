@@ -40,19 +40,27 @@
 - `docs/deployments/HELLO_AGENT_MVP_DPD.md` — deployment guardrails and rollback strategy.
 - `audit/logs/2025-10-25.md` — authoritative record for approvals.
 
-## 6. Risks & Mitigations
+## 6. Implementation Workstreams
+| Workstream | Description | Tasks | Owner | Status / Evidence |
+| --- | --- | --- | --- | --- |
+| A. MVP Plan Drafting | Maintain and iterate on `hello-agent/docs/MVP_PLAN.md` with stakeholder feedback. | Track comments, capture decisions, keep milestones updated. | Engineer Agent | In progress — v1 drafted 2025-10-25; future edits gated by weekly product reviews. |
+| B. Doc Sync Validation | Ensure bidirectional sync between `codex-agent` HQ and the hello-agent repo. | Follow `projects/hello-agent/docs/DOC_SYNC_CHECKLIST.md`, log evidence in audit file. | Engineer Agent | Checklist operational with helper script `projects/hello-agent/scripts/doc_sync_diff.sh`; last run logged 2025-10-25 10:30 UTC. |
+| C. Reporting Alignment | Map MVP metrics to finance + release reporting templates. | Update `reports/` summaries, confirm gates in `pipeline.yaml`. | Product & Finance Agents | Baseline mapping completed 2025-10-25; see `reports/README.md` “hello-agent MVP Reporting Alignment”. |
+| D. HR & Compliance Tracking | Keep staffing/performance notes and compliance hooks current. | Update HR prompt/logs, align with `docs/RELEASE_CHECKLIST.md`. | HR & Compliance Agents | Addendum for hello-agent MVP appended to `docs/RELEASE_CHECKLIST.md`; tracking call-outs logged 2025-10-25. |
+
+## 7. Risks & Mitigations
 | Risk | Impact | Mitigation |
 | --- | --- | --- |
 | Review delays block release readiness | Medium | Pre-schedule reviewer slots; capture async approvals in audit log |
 | Scope creep beyond MVP | Medium | Keep out-of-scope list visible; escalate via Product Agent |
 | Missing compliance trail | High | Update audit log immediately after key actions |
 
-## 7. Validation & Exit Criteria
+## 8. Validation & Exit Criteria
 - Integration checklist items marked complete once plan + validation steps are performed.
 - Product/Finance/HR approvals documented in audit log.
 - Any follow-up tasks captured in `projects/hello-agent/tasks/` for post-MVP iterations.
 
-## 8. Review & Sign-off
+## 9. Review & Sign-off
 | Role | Reviewer | Status | Evidence |
 | --- | --- | --- | --- |
 | Product | Product Agent | Approved | audit/logs/2025-10-25.md |
