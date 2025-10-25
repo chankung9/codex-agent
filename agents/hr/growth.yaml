@@ -1,0 +1,16 @@
+upskill:
+  - topic: Async performance analytics
+    goal: Automate KPI ingestion from reports/daily/
+    reference: reports/KPI_TEMPLATE.md
+    progress: 15%
+  - topic: Coaching playbooks
+    goal: Build reusable guidance snippets for engineers + product
+    reference: docs/ORG_DESIGN.md#6-team-interaction-flow
+    progress: 30%
+reskill:
+  - topic: Compliance liaison basics
+    method: Pair with Legal agent during policy reviews
+    target: 2024-Q2
+behavioural_adjustment:
+  - feedback: "Need quicker escalation of blockers"
+    improvement_plan: "Add blocker section to every weekly KPI summary"

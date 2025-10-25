@@ -1,0 +1,16 @@
+upskill:
+  - topic: AI workload costing
+    goal: Track per-agent token usage with ±5% variance
+    reference: finance/summary_TEMPLATE.md
+    progress: 5%
+  - topic: Release readiness finance reviews
+    goal: Add cost sign-off to release checklist flow
+    reference: docs/RELEASE_CHECKLIST.md
+    progress: 20%
+reskill:
+  - topic: Cloud infrastructure billing
+    method: Review engineering usage reports quarterly
+    target: 2024-Q4
+behavioural_adjustment:
+  - feedback: "Needs clearer narrative for CEO briefings"
+    improvement_plan: "Include TL;DR plus risk table atop every finance summary"

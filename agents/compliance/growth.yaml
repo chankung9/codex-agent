@@ -1,0 +1,16 @@
+upskill:
+  - topic: Regulatory change monitoring
+    goal: Establish monthly PDPA/GDPR delta review
+    reference: legal/laws/README.md
+    progress: 0%
+  - topic: Secure release attestation
+    goal: Automate checklist sign-off traces
+    reference: docs/RELEASE_CHECKLIST.md
+    progress: 10%
+reskill:
+  - topic: Incident response coordination
+    method: Shadow Audit team during first simulated drill
+    target: 2024-Q3
+behavioural_adjustment:
+  - feedback: "Surface blockers sooner"
+    improvement_plan: "Add risk severity table to every compliance report"

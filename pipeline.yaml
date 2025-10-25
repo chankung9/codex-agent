@@ -1,0 +1,47 @@
+# Codex-Agent Workflow Pipeline
+
+stages:
+  - name: ideation
+    entry_criteria:
+      - Idea logged in teams/<team>/brainstorm.md
+      - Discussion thread created under teams/<team>/discussions/
+    exit_criteria:
+      - Decision record with owner + success metrics
+  - name: planning
+    entry_criteria:
+      - Task YAML created under projects/<project>/tasks/
+      - Dependencies documented
+    gates:
+      - product_review: Product agent approves scope
+      - finance_review: Finance agent validates budget impact
+    exit_criteria:
+      - Task referenced inside .codex/plan.yaml
+  - name: implementation
+    gates:
+      - code_review: Engineer agent confirms checklist
+      - docs_update: Relevant docs/ files updated
+      - tests: Manual/automated validation summary documented
+    exit_criteria:
+      - Release checklist signed
+  - name: release
+    gates:
+      - legal_signoff: Legal agent reviewed policy impact
+      - compliance_signoff: Compliance agent confirms controls
+      - audit_log: Entry added to audit/logs/<date>.md
+    exit_criteria:
+      - reports/releases/ summary updated
+  - name: retrospective
+    entry_criteria:
+      - Post-release summary filed in reports/releases/summary/
+    exit_criteria:
+      - HR captures learnings inside teams/hr/reports/self_reviews.md
+
+controls:
+  security_frameworks:
+    - OWASP ASVS 4.0
+    - NIST 800-53
+    - ISO/IEC 27001
+  required_templates:
+    deployment_plan: docs/DEPLOYMENT_PLAN_TEMPLATE.md
+    incident: reports/incidents/INCIDENT_TEMPLATE.md
+    audit: reports/audit/AUDIT_LOG_TEMPLATE.md

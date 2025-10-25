@@ -1,0 +1,10 @@
+id: hello-agent-mvp-plan
+summary: Draft MVP plan covering scope, milestones, and owners
+owner: engineer_agent
+status: pending
+links:
+  - docs/INTEGRATION_HELLO_AGENT.md
+  - docs/PROJECTS.md
+acceptance_criteria:
+  - MVP plan committed to hello-agent repo
+  - Review sign-off by Product + HR agents

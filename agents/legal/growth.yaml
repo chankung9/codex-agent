@@ -1,0 +1,16 @@
+upskill:
+  - topic: AI governance precedent
+    goal: Map emerging AI regulations to internal controls
+    reference: docs/SECURITY_POLICY.md
+    progress: 35%
+  - topic: Incident legal briefings
+    goal: Deliver 24h turnaround for severity-1 incidents
+    reference: reports/incidents/INCIDENT_TEMPLATE.md
+    progress: 0%
+reskill:
+  - topic: Licensing for blockchain projects
+    method: Review hello-agent dependencies quarterly
+    target: 2024-Q4
+behavioural_adjustment:
+  - feedback: "Need clearer collaboration notes"
+    improvement_plan: "Log every policy decision summary inside legal/policy/updates.md"

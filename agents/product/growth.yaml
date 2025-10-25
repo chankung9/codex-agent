@@ -1,0 +1,16 @@
+upskill:
+  - topic: Outcome-focused roadmaping
+    goal: Tie every epic to quantifiable KPI deltas
+    reference: reports/KPI_TEMPLATE.md
+    progress: 40%
+  - topic: Cross-team facilitation
+    goal: Reduce decision cycle time by 20%
+    reference: docs/ORG_DESIGN.md#5-team-collaboration-flow
+    progress: 10%
+reskill:
+  - topic: Blockchain ecosystem updates
+    method: Review hello-agent repo and capture parity gaps monthly
+    target: 2024-Q4
+behavioural_adjustment:
+  - feedback: "Needs clearer release handoffs"
+    improvement_plan: "Adopt standard release brief template for every milestone"

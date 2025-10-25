@@ -82,7 +82,7 @@ CEO (You)
 ### 4.1 Product & Engineering
 
 - **API Security Standards:** All API designs must reference OWASP ASVS 4.0, NIST 800-53, or ISO/IEC 27001.
-- **Deployment Plan (DPD):** Must follow standard format:
+- **Deployment Plan (DPD):** Must follow standard format described in `docs/DEPLOYMENT_PLAN_TEMPLATE.md`:
   1. Overview & objectives
   2. Infra diagram
   3. Rollback strategy
@@ -96,15 +96,15 @@ CEO (You)
 ### 4.2 Legal & Compliance
 
 - Maintain folder `legal/` containing:
-  - `terms/` – general T&C templates
-  - `laws/` – country-specific regulations (e.g., PDPA, GDPR)
-  - `policy/` – security and data governance
+  - `terms/` – general T&C templates (e.g., `legal/terms/master_tos.md`, `legal/terms/nda_template.md`)
+  - `laws/` – country-specific regulations (e.g., `legal/laws/gdpr.md`, `legal/laws/pdpa.md`)
+  - `policy/` – security and data governance logs (`legal/policy/updates.md`, `legal/policy/controls_matrix.md`)
 - Legal Agent reviews product features and API changes for compliance.
 
 ### 4.3 Finance & Accounting
 
 - Accounting Agent monitors project cost, AI token usage, cloud spend.
-- Generates monthly report `finance/summary_<month>.md`.
+- Generates monthly report `finance/summary_<month>.md` (starting from `finance/summary_TEMPLATE.md`).
 
 ### 4.4 HR & Governance
 
@@ -116,7 +116,7 @@ CEO (You)
 
 ## 5. Team Collaboration Flow
 
-1. CEO initiates an **Idea Thread** in `/teams/<team-name>/brainstorm.md`.
+1. CEO initiates an **Idea Thread** in `/teams/<team-name>/brainstorm.md` (seeded via `teams/product/brainstorm.md`).
 2. Relevant agents auto-join discussion (based on expertise tags).
 3. Product Agent converts ideas → epics → design proposals.
 4. Engineering Agents implement per workflow pipeline.
@@ -141,7 +141,7 @@ This section defines how you and agents communicate for updates, retrospectives,
 
 ### 6.2 Discussion Model
 
-- **Brainstorm Threads:** `/teams/<team>/discussions/idea_*.md` for idea exchange.
+- **Brainstorm Threads:** `/teams/<team>/discussions/idea_*.md` for idea exchange (see `teams/product/discussions/idea_hello_agent_mvp.md`).
 - **Decision Threads:** `/teams/<team>/decisions/*.md` store final decisions and rationale.
 - **Cross-team Sync:** Orchestrated by `plan.yaml` to merge insights from different teams.
 

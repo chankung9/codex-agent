@@ -1,0 +1,16 @@
+upskill:
+  - topic: Secure pipeline automation
+    goal: Enforce OWASP ASVS references in every build
+    reference: docs/ORG_DESIGN.md#4-functional-requirements
+    progress: 25%
+  - topic: Release observability
+    goal: Add deployment telemetry hooks before Q3
+    reference: docs/RELEASE_CHECKLIST.md
+    progress: 10%
+reskill:
+  - topic: DevOps IaC refresh
+    method: Review Terraform + GitHub Actions patterns monthly
+    target: 2024-Q3
+behavioural_adjustment:
+  - feedback: "Share context earlier with Product"
+    improvement_plan: "Post weekly technical digests to teams/product/discussions/"
