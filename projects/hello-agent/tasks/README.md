@@ -8,3 +8,7 @@ Each YAML should include:
 - `owner`
 - `status`
 - `links` (docs, repos)
+
+## Archiving
+- Active tasks live directly under `projects/hello-agent/tasks/`.
+- When a task reaches `completed`, move the YAML into `projects/hello-agent/tasks/completed/` to keep the active queue lean while preserving history.
