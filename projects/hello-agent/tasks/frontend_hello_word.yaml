@@ -1,7 +1,7 @@
 id: hello-agent-frontend-helloword
 summary: Build HelloWord animated frontend per MVP plan
 owner: engineer_agent
-status: pending
+status: completed
 links:
   - projects/hello-agent/docs/MVP_PLAN.md
   - docs/INTEGRATION_HELLO_AGENT.md
@@ -9,6 +9,6 @@ links:
 acceptance_criteria:
   - Web UI renders "HelloWord" centered with bouncing letter animation
   - README in hello-agent repo documents architecture + run instructions
-  - Demo evidence (gif/video) linked in reports/releases/summary/
+  - Demo evidence (gif/video) linked in reports/releases/summary/ (see `/../hello-agent/demo/2025-10-2617-02-52.gif`)
 notes:
   - Use side-by-side hello-agent repo, log doc-sync runs in audit log

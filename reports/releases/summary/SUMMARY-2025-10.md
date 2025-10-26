@@ -110,6 +110,7 @@ Linked reports: `/reports/incidents/`
 - Linked KPI Reports: `/reports/kpi/` (next weekly report will cite MVP milestones)
 - Linked Incident Reports: `/reports/incidents/` (none for this period)
 - Supporting Docs: `projects/hello-agent/docs/MVP_PLAN.md`, `docs/INTEGRATION_HELLO_AGENT.md`, `docs/RELEASE_CHECKLIST.md` addendum.
+- Demo Evidence: `/../hello-agent/demo/2025-10-2617-02-52.gif`
 
 ---
 
