@@ -2,10 +2,21 @@
 .DS_Store
 Thumbs.db
 *.swp
+*~
 
-# Python cache
+# Python cache / envs
 __pycache__/
 *.pyc
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# Node / web build artifacts
+node_modules/
+dist/
+*.tsbuildinfo
 
 # Rust build artifacts
 target/
@@ -15,4 +26,7 @@ workspace/agent_router_rs/Cargo.lock
 # Tooling outputs
 .idea/
 .vscode/
+.pytest_cache/
+.coverage
+coverage/
 *.log
