@@ -7,7 +7,16 @@ Codex-Agent coordinates multiple specialized agents (product, engineering, HR, a
 - **Mission:** Provide a structured workspace where autonomous and human operators can plan, implement, audit, and report on Codex-led initiatives.
 - **Scope:** Organization-wide templates, project registry, integration notes, and workspace branches (`main`, `dev`, `codex/auto`) that enable manual and automated contributions.
 - **Key Assets:** Agent prompt packs, organization design blueprint, project registry, and integration playbooks across docs, audit, finance, and reports directories.
-- **Next Actions:** Maintain the project registry, document new integrations in `docs/`, and keep the workspace directory aligned with active implementation tasks before promoting changes to `main`.
+- **Branching Policy:** `main` stays stable for consumers landing in the repo; all day-to-day work must happen on `dev` (or feature branches that merge into `dev`) before promotion back to `main`.
+- **Next Actions:** Maintain the project registry, document new integrations in `docs/`, keep the workspace directory aligned with active implementation tasks, and only fast-forward `main` once `dev` is validated.
+
+### Working in This Repo
+1. Clone the repository and immediately switch to the development branch:
+   ```bash
+   git checkout dev
+   ```
+2. Create feature branches from `dev` as needed, then open PRs targeting `dev`.
+3. After review + validation, merge into `dev`, and only then promote to `main` via the release process.
 
 ## Automation Router
 
