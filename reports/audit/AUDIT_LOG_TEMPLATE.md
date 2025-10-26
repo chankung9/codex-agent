@@ -37,6 +37,12 @@ header
 | EV-002      | Reports     |             |          |             |
 |             |             |             |          |             |
 
+> _Reminder:_ When logging engineering activities (deployments, doc-sync runs, feature development), include:
+> - Responsible agent (e.g., Engineer Agent)
+> - Timestamp (UTC)
+> - Relevant commit hash or tag (for downstream repos such as `hello-agent`)
+> - Verification artifacts (e.g., doc_sync_diff output, build logs, demo recordings)
+
 ---
 
 ## 4) Findings
