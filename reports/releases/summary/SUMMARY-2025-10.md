@@ -26,6 +26,7 @@ last_updated: 2025-10-25
 ## 2) Key Highlights
 
 - **Major product milestones delivered:** hello-agent MVP plan drafted (`projects/hello-agent/docs/MVP_PLAN.md`) with workstreams covering doc sync, reporting, and HR/compliance updates.
+- **Deployment status:** hello-agent frontend merged to `main` and tagged `v0.1.0-helloworld` (commit `f76c3f9`), demo evidence `/../hello-agent/demo/2025-10-2617-02-52.gif` archived.
 - **Security posture:** Release checklist updated with hello-agent addendum ensuring SECURITY_CHECKLIST + doc-sync evidence are enforced before go-live.
 - **Audit and compliance outcomes:** Audit log (`audit/logs/2025-10-25.md`) captures approvals, doc sync validation, reporting alignment, and helper script creation.
 
@@ -111,6 +112,7 @@ Linked reports: `/reports/incidents/`
 - Linked Incident Reports: `/reports/incidents/` (none for this period)
 - Supporting Docs: `projects/hello-agent/docs/MVP_PLAN.md`, `docs/INTEGRATION_HELLO_AGENT.md`, `docs/RELEASE_CHECKLIST.md` addendum.
 - Demo Evidence: `/../hello-agent/demo/2025-10-2617-02-52.gif`
+- Release Tag: `hello-agent@v0.1.0-helloworld` (commit `f76c3f9` on `main`)
 
 ---
 
