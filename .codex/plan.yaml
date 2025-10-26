@@ -86,3 +86,21 @@ plan:
     meta:
       branch: dev
       auto_commit_branch: codex/auto
+
+  # -----------------------------------------------------
+  # NEW STEP: Staff Reflections
+  # -----------------------------------------------------
+  - id: hello_agent_staff_reports
+    depends_on: hello_agent_mvp_plan
+    description: "Collect short reports from each hello-agent stakeholder"
+    agent: hr
+    prompt: |
+      Each involved agent (Product, Engineer, Finance, HR, Compliance) must file a brief report after major milestones.
+      1. Use `reports/projects/hello-agent/staff_report_TEMPLATE.md`.
+      2. Save individual reports under `reports/projects/hello-agent/staff_reports/<agent>_<date>.md`.
+      3. Cover work summary, feelings/sentiment, recommendations, and place/role in the project.
+      4. Reference evidence (commits, audit entries, release summaries) and log completion in `audit/logs/<date>.md`.
+    output: "reports/projects/hello-agent/staff_reports/"
+    meta:
+      branch: dev
+      auto_commit_branch: codex/auto
