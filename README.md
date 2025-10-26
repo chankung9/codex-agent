@@ -2,6 +2,24 @@
 
 Codex-Agent coordinates multiple specialized agents (product, engineering, HR, audit) to bootstrap and operate AI-assisted workstreams for the Solana ecosystem. The repository captures shared governance artifacts, cross-team plans, and integration guides for downstream sandboxes like `hello-agent`.
 
+## Main Branch Snapshot
+
+Codex-Agent is actively testing whether it can govern an end-to-end software-production workflow. The `main` branch stays stable for observers, while active work streams live on `dev`.
+
+### View Work in Progress
+1. Clone the repository and switch to `dev`:
+   ```bash
+   git clone <repo-url>
+   cd codex-agent
+   git checkout dev
+   ```
+2. Create feature branches from `dev`, open PRs back to `dev`, and promote to `main` only after validation/tagging.
+
+### What to Expect on `main`
+- High-level documentation and previously released artifacts.
+- Links to downstream projects (such as hello-agent) and governance templates.
+- Release tags that have passed the review pipeline; active pilots (e.g., hello-agent) are tracked on `dev` or in `reports/releases/`.
+
 ## Executive Overview
 
 - **Mission:** Provide a structured workspace where autonomous and human operators can plan, implement, audit, and report on Codex-led initiatives.
@@ -11,9 +29,6 @@ Codex-Agent coordinates multiple specialized agents (product, engineering, HR, a
 - **Next Actions:** Maintain the project registry, document new integrations in `docs/`, keep the workspace directory aligned with active implementation tasks, and only fast-forward `main` once `dev` is validated.
 
 ### Working in This Repo
-> ℹ️ The organization is currently **testing whether Codex-Agent can govern a full software-production process**.  
-> The `main` branch stays stable for observers; switch to `dev` to see work-in-progress.
-
 1. Clone the repository and immediately switch to the development branch:
    ```bash
    git checkout dev
@@ -23,7 +38,7 @@ Codex-Agent coordinates multiple specialized agents (product, engineering, HR, a
 
 ## Automation Router
 
-Use `workspace/agent_router.py` (Python) or the new Rust binary in `workspace/agent_router_rs/` to mirror agent chat commands into the correct files:
+Use `workspace/agent_router.py` (Python) or the Rust binary in `workspace/agent_router_rs/` to mirror agent chat commands into the correct files:
 
 | Command | Action | Target |
 | --- | --- | --- |
