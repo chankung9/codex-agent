@@ -11,6 +11,9 @@ Codex-Agent coordinates multiple specialized agents (product, engineering, HR, a
 - **Next Actions:** Maintain the project registry, document new integrations in `docs/`, keep the workspace directory aligned with active implementation tasks, and only fast-forward `main` once `dev` is validated.
 
 ### Working in This Repo
+> ℹ️ The organization is currently **testing whether Codex-Agent can govern a full software-production process**.  
+> The `main` branch stays stable for observers; switch to `dev` to see work-in-progress.
+
 1. Clone the repository and immediately switch to the development branch:
    ```bash
    git checkout dev
