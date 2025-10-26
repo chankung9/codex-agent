@@ -19,7 +19,7 @@ dist/
 *.tsbuildinfo
 
 # Rust build artifacts
-target/
+target/*
 workspace/agent_router_rs/target/
 workspace/agent_router_rs/Cargo.lock
 
