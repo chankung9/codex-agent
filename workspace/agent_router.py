@@ -19,6 +19,7 @@ import os
 import re
 from pathlib import Path
 from typing import Any, Callable, Dict
+import copy
 
 ROOT = Path(__file__).resolve().parent.parent
 FINANCE_DIR = ROOT / "finance"
@@ -222,8 +223,12 @@ def env_agent_key(agent: str, *parts: str) -> str:
 
 
 def apply_env_overrides(settings: Dict[str, Dict[str, Any]]) -> Dict[str, Dict[str, Any]]:
+
+    # Work on a deep copy to avoid mutating the caller's object.
+    result = copy.deepcopy(settings)
+
     for agent in AI_AGENT_LABELS:
-        agent_settings = settings.setdefault(agent, {})
+        agent_settings = result.setdefault(agent, {})
         actions = agent_settings.setdefault("actions", {})
 
         api_key_env = os.getenv(env_agent_key(agent, "api", "key"))
@@ -239,10 +244,59 @@ def apply_env_overrides(settings: Dict[str, Dict[str, Any]]) -> Dict[str, Dict[s
             if action_env:
                 actions[action] = action_env
 
-    return settings
+    return result
 
 
 def load_agent_settings() -> Dict[str, Dict[str, Any]]:
+    def _validate_and_normalize(raw: Any) -> Dict[str, Dict[str, Any]]:
+        if not isinstance(raw, dict):
+            raise SystemExit(f"Agent configuration must be a JSON object mapping agent keys to settings.")
+
+        normalized: Dict[str, Dict[str, Any]] = {}
+        # Defaults matching ensure_agent_config_file()
+        default_actions = {
+            "plan": "teams/engineering/discussions/",
+            "review": "teams/engineering/discussions/",
+            "discuss": "teams/cross-functional/discussions/",
+        }
+
+        for agent in AI_AGENT_LABELS:
+            entry = raw.get(agent, {})
+            if not isinstance(entry, dict):
+                if agent in raw:
+                    raise SystemExit(f"Invalid settings for agent '{agent}': expected an object.")
+                entry = {}
+
+            api_key = entry.get("api_key", f"<SET_{agent.upper()}_TOKEN>")
+            if not isinstance(api_key, str):
+                raise SystemExit(f"'api_key' for agent '{agent}' must be a string.")
+
+            default_scope = entry.get("default_scope", "general")
+            if not isinstance(default_scope, str):
+                raise SystemExit(f"'default_scope' for agent '{agent}' must be a string.")
+
+            actions_raw = entry.get("actions", {})
+            if not isinstance(actions_raw, dict):
+                raise SystemExit(f"'actions' for agent '{agent}' must be an object mapping action->path.")
+
+            actions: Dict[str, str] = {}
+            for k, v in actions_raw.items():
+                if not isinstance(k, str) or not isinstance(v, str):
+                    raise SystemExit(f"Action mapping for agent '{agent}' contains non-string key/value.")
+                actions[k] = v
+
+            # Ensure supported actions exist with sensible defaults if omitted.
+            for act, default_dir in default_actions.items():
+                actions.setdefault(act, default_dir)
+
+            normalized[agent] = {
+                "api_key": api_key,
+                "default_scope": default_scope,
+                "actions": actions,
+            }
+
+        return normalized
+
     env_payload = os.getenv(ENV_CONFIG_JSON_KEY)
     if env_payload:
         try:
@@ -251,7 +305,8 @@ def load_agent_settings() -> Dict[str, Dict[str, Any]]:
             raise SystemExit(
                 f"Failed to parse JSON from {ENV_CONFIG_JSON_KEY}: {exc}"
             ) from exc
-        return apply_env_overrides(data)
+        validated = _validate_and_normalize(data)
+        return apply_env_overrides(validated)
 
     path = ensure_agent_config_file()
     try:
@@ -260,7 +315,9 @@ def load_agent_settings() -> Dict[str, Dict[str, Any]]:
         raise SystemExit(
             f"Failed to parse agent configuration at {path.relative_to(ROOT)}: {exc}"
         ) from exc
-    return apply_env_overrides(data)
+
+    validated = _validate_and_normalize(data)
+    return apply_env_overrides(validated)
 
 
 def main() -> None:
