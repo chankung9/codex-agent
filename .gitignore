@@ -30,3 +30,6 @@ workspace/agent_router_rs/Cargo.lock
 .coverage
 coverage/
 *.log
+
+# Local agent configuration
+workspace/config/agents.json

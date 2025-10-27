@@ -29,6 +29,7 @@ ENGINEERING_DISCUSSIONS_DIR = TEAMS_DIR / "engineering" / "discussions"
 CROSS_FUNCTIONAL_DISCUSSIONS_DIR = TEAMS_DIR / "cross-functional" / "discussions"
 CONFIG_DIR = ROOT / "workspace" / "config"
 AGENT_CONFIG_PATH = CONFIG_DIR / "agents.json"
+AGENT_CONFIG_TEMPLATE_PATH = CONFIG_DIR / "agents.template.json"
 FINANCE_TEMPLATE = FINANCE_DIR / "summary_TEMPLATE.md"
 AUTOMATION_HEADING = "## Automation Notes"
 DISCUSSION_HEADING = "## Notes"
@@ -197,19 +198,23 @@ def ensure_agent_config_file() -> Path:
         return AGENT_CONFIG_PATH
 
     CONFIG_DIR.mkdir(parents=True, exist_ok=True)
-    default_payload = {
-        agent: {
-            "api_key": f"<SET_{agent.upper()}_TOKEN>",
-            "actions": {
-                "plan": "teams/engineering/discussions/",
-                "review": "teams/engineering/discussions/",
-                "discuss": "teams/cross-functional/discussions/",
-            },
-            "default_scope": "general",
+    if AGENT_CONFIG_TEMPLATE_PATH.exists():
+        template_text = AGENT_CONFIG_TEMPLATE_PATH.read_text(encoding="utf-8")
+        AGENT_CONFIG_PATH.write_text(template_text if template_text.endswith("\n") else template_text + "\n", encoding="utf-8")
+    else:
+        default_payload = {
+            agent: {
+                "api_key": f"<SET_{agent.upper()}_TOKEN>",
+                "actions": {
+                    "plan": "teams/engineering/discussions/",
+                    "review": "teams/engineering/discussions/",
+                    "discuss": "teams/cross-functional/discussions/",
+                },
+                "default_scope": "general",
+            }
+            for agent in AI_AGENT_LABELS
         }
-        for agent in AI_AGENT_LABELS
-    }
-    AGENT_CONFIG_PATH.write_text(json.dumps(default_payload, indent=2) + "\n", encoding="utf-8")
+        AGENT_CONFIG_PATH.write_text(json.dumps(default_payload, indent=2) + "\n", encoding="utf-8")
     print(
         "Initialized agent configuration template at "
         f"{AGENT_CONFIG_PATH.relative_to(ROOT)}. Update this file with real credentials."
