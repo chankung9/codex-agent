@@ -1,0 +1,29 @@
+{
+  "copilot": {
+    "api_key": "<SET_COPILOT_TOKEN>",
+    "actions": {
+      "plan": "teams/engineering/discussions/",
+      "review": "teams/engineering/discussions/",
+      "discuss": "teams/cross-functional/discussions/"
+    },
+    "default_scope": "general"
+  },
+  "codex": {
+    "api_key": "<SET_CODEX_TOKEN>",
+    "actions": {
+      "plan": "teams/engineering/discussions/",
+      "review": "teams/engineering/discussions/",
+      "discuss": "teams/cross-functional/discussions/"
+    },
+    "default_scope": "general"
+  },
+  "glm": {
+    "api_key": "<SET_GLM_TOKEN>",
+    "actions": {
+      "plan": "teams/engineering/discussions/",
+      "review": "teams/engineering/discussions/",
+      "discuss": "teams/cross-functional/discussions/"
+    },
+    "default_scope": "general"
+  }
+}
