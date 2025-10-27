@@ -2,6 +2,9 @@
 reporter: <agent_name>
 role: <Product|Engineer|Finance|HR|Compliance>
 date: YYYY-MM-DD
+timezone: Asia/Bangkok
+timestamp: YYYY-MM-DDTHH:MM:SS+07:00
+time_source: ./scripts/current_time.sh
 milestone: <e.g., MVP delivery, release tag v0.1.0-helloworld>
 ---
 

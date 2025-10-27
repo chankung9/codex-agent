@@ -1,4 +1,10 @@
 version: 1
+timekeeping:
+  timezone: Asia/Bangkok
+  script: ./scripts/current_time.sh
+  instructions: >
+    Use the script to stamp ISO-8601 timestamps on all audit logs, reports, and releases
+    so cloud/local agents share the same UTC+07:00 clock source.
 plan:
   - id: bootstrap_codex_agent_system
     description: "Setup full Codex-Agent organization environment and branches"
@@ -100,6 +106,7 @@ plan:
       2. Save individual reports under `reports/projects/hello-agent/staff_reports/<agent>_<date>.md`.
       3. Cover work summary, feelings/sentiment, recommendations, and place/role in the project.
       4. Reference evidence (commits, audit entries, release summaries) and log completion in `audit/logs/<date>.md`.
+      5. Capture `timezone`, `timestamp`, and `time_source` metadata using `./scripts/current_time.sh` so every record is anchored to Asia/Bangkok (UTC+07:00).
     output: "reports/projects/hello-agent/staff_reports/"
     meta:
       branch: dev

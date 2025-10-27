@@ -36,6 +36,12 @@ Codex-Agent is actively testing whether it can govern an end-to-end software-pro
 2. Create feature branches from `dev` as needed, then open PRs targeting `dev`.
 3. After review + validation, merge into `dev`, and only then promote to `main` via the release process.
 
+## Timekeeping Standard
+
+- All Codex-Agent records (audit logs, staff reports, release notes, plan manifests) **must use Asia/Bangkok (UTC+07:00)** as the canonical timezone.
+- Before writing any timestamped content, call `./scripts/current_time.sh` (or import its logic) to capture an ISO-8601 value, then store both the `timezone` and `timestamp` fields in the document.
+- Automation pipelines and downstream repos should reference this script instead of relying on host clock defaults to avoid cloud/on-prem drift.
+
 ## Automation Router
 
 Use `workspace/agent_router.py` (Python) or the Rust binary in `workspace/agent_router_rs/` to mirror agent chat commands into the correct files:

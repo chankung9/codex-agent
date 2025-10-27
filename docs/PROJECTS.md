@@ -9,6 +9,7 @@ Fields: name, purpose, owner, repo, status, notes
 - Do **not** nest downstream repos inside `codex-agent`; this prevents accidental commits, submodule drift, and mixing Git histories.
 - Shared tooling (like `projects/<project>/scripts/doc_sync_diff.sh`) assumes this layout and accepts a path argument such as `../hello-agent`.
 - After any documentation update that affects a downstream project, engineers rerun the doc-sync helper against the side-by-side clone and log the evidence in `audit/logs/YYYY-MM-DD.md`.
+- All audit/report timestamps recorded during coordination **must use Asia/Bangkok (UTC+07:00)** via `./scripts/current_time.sh` to keep humans and agents aligned on a single clock source.
 
 ## Entries
 
