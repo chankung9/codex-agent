@@ -1,0 +1,28 @@
+snapshot_id: frontend_color_controls_001-2025-10-28-01
+task_id: hello-agent-frontend-color-controls
+captured_at: 2025-10-28T00:00:00Z
+summary: >
+  Front-end plan locked for minimal themed color controls feature. We will implement
+  native color pickers with persistent CSS variable updates and contrast validation.
+design_choices:
+  implementation_style: "Vanilla Web APIs; no third-party UI libraries."
+  color_management: "Single ColorSettingsStore wrapping localStorage with defaults and rehydration."
+  ui_components:
+    - "Text color icon button (🅰️) opening shared popover color picker."
+    - "Background color icon button (🎨) opening shared popover color picker."
+    - "Contrast warning chip rendered when WCAG ratio < 4.5:1."
+plan:
+  steps:
+    - order: 1
+      detail: "Implement ColorSettingsStore with defaults, getters/setters, and bootstrapping on load."
+    - order: 2
+      detail: "Add contrast utility helpers (hex parsing, luminance, ratio calculation)."
+    - order: 3
+      detail: "Build icon button styles and shared popover color picker."
+    - order: 4
+      detail: "Wire picker updates to CSS custom properties and persistence."
+    - order: 5
+      detail: "Render contrast warning chip and run smoke tests across viewports."
+notes:
+  - "Task remains small; no subtasks required."
+  - "Reference discussions logged on 2025-10-28 for Codex and GLM inputs."

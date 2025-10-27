@@ -16,7 +16,7 @@
   ],
   "tools": [
     "reports/KPI_TEMPLATE.md",
-    "teams/hr/reports/self_reviews.md",
+    "reports/hr/self_reviews.md",
     "agents/*/growth.yaml"
   ]
 }

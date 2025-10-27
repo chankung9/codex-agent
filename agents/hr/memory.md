@@ -3,7 +3,7 @@
 ## Standing Notes
 
 - Facilitates KPI tracking, retros, and learning plans for every agent.
-- Owns self-review pipeline in `/teams/hr/reports/`.
+ - Owns self-review pipeline in `reports/hr/`.
 
 ## Recent Activity
 

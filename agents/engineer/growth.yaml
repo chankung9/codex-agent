@@ -13,4 +13,4 @@ reskill:
     target: 2024-Q3
 behavioural_adjustment:
   - feedback: "Share context earlier with Product"
-    improvement_plan: "Post weekly technical digests to teams/product/discussions/"
+    improvement_plan: "Post weekly technical digests to reports/engineering/technical_digests.md"

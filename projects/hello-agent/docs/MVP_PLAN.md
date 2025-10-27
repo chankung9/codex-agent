@@ -13,6 +13,7 @@
 2. Definition of reporting cadence (weekly product review, monthly finance snapshot).
 3. HR inclusion guidelines for performance tracking and staffing.
 4. **Reference implementation:** Web frontend demo that renders "HelloWorld" centered on screen with animated letters that move/bounce when hitting viewport edges (see Example Deliverable below).
+5. **Themed color controls:** Icon-based text/background color toggles aligned with hello-agent branding and accessibility guidelines (see `FEATURE_MINIMAL_THEMED_COLOR_CONTROLS.md`).
 
 ### Out-of-Scope (MVP)
 - Automated deployment or bot-driven synchronization.
@@ -41,6 +42,7 @@
 - `pipeline.yaml` — specifies gates (product_review, finance_review) applicable to this effort.
 - `docs/deployments/HELLO_AGENT_MVP_DPD.md` — deployment guardrails and rollback strategy.
 - `audit/logs/2025-10-25.md` — authoritative record for approvals.
+- `docs/AI_COLLABORATION_WORKFLOW.md` — describes how tasks, backlogs, and AI discussions stay synchronized.
 
 ## 6. Implementation Workstreams
 | Workstream | Description | Tasks | Owner | Status / Evidence |
@@ -50,6 +52,7 @@
 | C. Reporting Alignment | Map MVP metrics to finance + release reporting templates. | Update `reports/` summaries, confirm gates in `pipeline.yaml`. | Product & Finance Agents | Baseline mapping completed 2025-10-25; see `reports/README.md` “hello-agent MVP Reporting Alignment”. |
 | D. HR & Compliance Tracking | Keep staffing/performance notes and compliance hooks current. | Update HR prompt/logs, align with `docs/RELEASE_CHECKLIST.md`. | HR & Compliance Agents | Addendum for hello-agent MVP appended to `docs/RELEASE_CHECKLIST.md`; tracking call-outs logged 2025-10-25. |
 | E. Frontend Prototype | Build and verify the HelloWorld animation demo (see Example Deliverable). | Design UX, select tech stack, implement animation, capture test evidence | Engineer Agent | Pending — requires downstream repo implementation |
+| F. Minimal Themed Color Controls | Implement icon-only text/background color pickers following accessibility requirements. | Review `FEATURE_MINIMAL_THEMED_COLOR_CONTROLS.md`, capture `@glm discuss` (live GLM 4.6 via Z.AI) and `@codex discuss` notes before finalizing implementation plan, persist settings, enforce contrast checks. | Engineer Agent | Pending — new requirement logged 2025-10-28 |
 
 ## 7. Architecture Overview (Engineer-owned)
 - **Client Application:** Single-page web frontend (HTML/CSS/JavaScript or preferred framework) hosted from the hello-agent repo. No backend dependencies for MVP.

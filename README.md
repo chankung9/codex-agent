@@ -42,27 +42,8 @@ Codex-Agent is actively testing whether it can govern an end-to-end software-pro
 - Before writing any timestamped content, call `./scripts/current_time.sh` (or import its logic) to capture an ISO-8601 value, then store both the `timezone` and `timestamp` fields in the document.
 - Automation pipelines and downstream repos should reference this script instead of relying on host clock defaults to avoid cloud/on-prem drift.
 
-## Automation Router
+## AI Collaboration & Logging
 
-Use `workspace/agent_router.py` (Python) or the Rust binary in `workspace/agent_router_rs/` to mirror agent chat commands into the correct files:
-
-| Command | Action | Target |
-| --- | --- | --- |
-| `@finance summary` | Ensures the current month's finance summary exists (auto-filled from `finance/summary_TEMPLATE.md`) and appends an Automation Notes entry. | `finance/summary_<YYYY-MM>.md` |
-| `@compliance audit` | Creates/appends the daily audit log entry with timestamped context. | `audit/logs/<YYYY-MM-DD>.md` |
-
-Python example:
-
-```bash
-python3 workspace/agent_router.py "@finance summary" -c "DPD approvals still pending."
-python3 workspace/agent_router.py "@compliance audit" -c "Verified hello-agent DPD captured controls."
-```
-
-Rust example (run from repo root):
-
-```bash
-cargo run --manifest-path workspace/agent_router_rs/Cargo.toml -- "@finance summary" -c "Rust router note."
-cargo run --manifest-path workspace/agent_router_rs/Cargo.toml -- "@compliance audit" -c "Rust router audit."
-```
-
-Extend the router with additional handlers whenever new agent commands need deterministic storage.
+- Follow `docs/AI_COLLABORATION_WORKFLOW.md` for the canonical flow to capture AI-assisted discussions.
+- After running a short prompt in your preferred extension (Codex, Copilot Chat, GLM/Cline, etc.), create or update the relevant backlog snapshot under `projects/<project>/backlogs/` with the key outcomes.
+- Link the snapshot from the active task YAML so reviewers can trace decisions, risks, and next steps without relying on external chat logs.

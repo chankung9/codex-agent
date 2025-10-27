@@ -116,7 +116,7 @@ CEO (You)
 
 ## 5. Team Collaboration Flow
 
-1. CEO initiates an **Idea Thread** in `/teams/<team-name>/brainstorm.md` (seeded via `teams/product/brainstorm.md`).
+1. CEO initiates an **Idea Snapshot** in `projects/<project>/backlogs/ideation/brainstorm_<slug>_<date>.md` (use existing backlog templates as seeds).
 2. Relevant agents auto-join discussion (based on expertise tags).
 3. Product Agent converts ideas → epics → design proposals.
 4. Engineering Agents implement per workflow pipeline.
@@ -141,14 +141,14 @@ This section defines how you and agents communicate for updates, retrospectives,
 
 ### 6.2 Discussion Model
 
-- **Brainstorm Threads:** `/teams/<team>/discussions/idea_*.md` for idea exchange (see `teams/product/discussions/idea_hello_agent_mvp.md`).
-- **Decision Threads:** `/teams/<team>/decisions/*.md` store final decisions and rationale.
-- **Cross-team Sync:** Orchestrated by `plan.yaml` to merge insights from different teams.
+- **Brainstorm Snapshots:** `projects/<project>/backlogs/<slug>/brainstorm_<date>.md` for idea exchange (e.g., `projects/hello-agent/backlogs/frontend_color_controls_001/`).
+- **Decision Records:** `projects/<project>/backlogs/<slug>/decision_<date>.md` store final decisions and rationale.
+- **Cross-team Sync:** Orchestrated by `plan.yaml` to merge insights from different workstreams.
 
 ### 6.3 Feedback & Evaluation
 
 - Every Friday, HR Agent compiles summaries of performance indicators from all agents.
-- Each agent generates a self-review and sends it to `/teams/hr/reports/self_reviews.md`.
+- Each agent generates a self-review and sends it to `reports/hr/self_reviews.md`.
 - CEO can send structured feedback, triggering skill-up plans automatically.
 
 ### 6.4 Incident Response
@@ -192,8 +192,8 @@ Defines how human–AI interaction, messaging, and execution translate into stru
 
 | Type            | Purpose                      | Trigger         | Output                             |
 | --------------- | ---------------------------- | --------------- | ---------------------------------- |
-| **DISCUSS**     | Idea exchange                | Chat            | `/teams/<team>/discussions/*.md`   |
-| **DECISION**    | Approval, direction          | CEO / Lead      | `/teams/<team>/decisions/*.md`     |
+| **DISCUSS**     | Idea exchange                | Chat            | `projects/<project>/backlogs/<slug>/discussion_<date>.md` |
+| **DECISION**    | Approval, direction          | CEO / Lead      | `projects/<project>/backlogs/<slug>/decision_<date>.md`    |
 | **TASK_ASSIGN** | Work allocation              | CEO / PM        | `/projects/<project>/tasks/*.yaml` |
 | **REPORT**      | Status, KPI, summary         | Agent           | `/reports/*.md`                    |
 | **ALERT**       | Incident / Risk notification | Monitor / Legal | `/audit/incidents/*.yaml`          |
@@ -212,7 +212,7 @@ Defines how human–AI interaction, messaging, and execution translate into stru
 | -------------- | ------------- | -------------------------------------------------------- |
 | System failure | Monitor Agent | creates `/audit/incidents/...` and alert to chat         |
 | Policy breach  | Legal Agent   | flags `/legal/violations/*.md`                           |
-| Overdue task   | HR Agent      | posts reminder to `/teams/hr/reports/KPI_<month>.md`     |
+| Overdue task   | HR Agent      | posts reminder to `reports/hr/KPI_<month>.md`            |
 | KPI summary    | HR Agent      | aggregates metrics to `/reports/KPI_SUMMARY_<period>.md` |
 
 ### 7.6 CEO Interaction Commands

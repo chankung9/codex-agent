@@ -3,8 +3,8 @@
 stages:
   - name: ideation
     entry_criteria:
-      - Idea logged in teams/<team>/brainstorm.md
-      - Discussion thread created under teams/<team>/discussions/
+      - Idea logged in projects/<project>/backlogs/ideation/<YYYY-MM-DD>.yaml
+      - Discussion summary captured under projects/<project>/backlogs/<task_id>/
     exit_criteria:
       - Decision record with owner + success metrics
   - name: planning
@@ -34,7 +34,7 @@ stages:
     entry_criteria:
       - Post-release summary filed in reports/releases/summary/
     exit_criteria:
-      - HR captures learnings inside teams/hr/reports/self_reviews.md
+      - HR captures learnings inside reports/hr/self_reviews.md
 
 controls:
   security_frameworks:
