@@ -1,7 +1,7 @@
 id: hello-agent-frontend-color-controls
 summary: Implement minimal themed color controls with icon-only pickers and contrast validation
 owner: engineer_agent
-status: in_review
+status: completed
 links:
   - projects/hello-agent/docs/FEATURE_MINIMAL_THEMED_COLOR_CONTROLS.md
   - projects/hello-agent/docs/MVP_PLAN.md
@@ -13,4 +13,4 @@ acceptance_criteria:
   - Contrast ratio between text and background remains ≥ 4.5:1 or surfaces an in-app visual warning when violated.
   - Discuss outcomes from GLM and Codex are recorded in the associated backlog snapshot before implementation begins.
 notes:
-  - Implemented on hello-agent branch `feature/minimal-themed-color-controls`; awaiting downstream review/merge.
+  - Delivered via hello-agent branch `feature/minimal-themed-color-controls`; awaiting merge follow-up.
