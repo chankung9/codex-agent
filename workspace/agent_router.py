@@ -296,10 +296,7 @@ def main() -> None:
         f"@{agent} {action}" for agent in AI_AGENT_LABELS for action in sorted(SUPPORTED_AI_ACTIONS)
     )
     raise SystemExit(
-        "Unknown command '"
-        + command
-        + "'. Available: "
-        + ", ".join(filter(None, [available_core, ai_options]))
+        f"Unknown command '{command}'. Available: {', '.join(filter(None, [available_core, ai_options]))}"
     )
 
 
