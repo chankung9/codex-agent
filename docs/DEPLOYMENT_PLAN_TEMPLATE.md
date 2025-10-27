@@ -1,3 +1,11 @@
+---
+prepared_by: Engineer Agent
+date: YYYY-MM-DD
+timezone: Asia/Bangkok
+timestamp: YYYY-MM-DDTHH:MM:SS+07:00
+time_source: ./scripts/current_time.sh
+---
+
 # Deployment Plan (DPD) Template
 
 1. **Overview & Objectives**

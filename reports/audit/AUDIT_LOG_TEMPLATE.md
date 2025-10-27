@@ -3,6 +3,9 @@ version: 1.0
 created_at: YYYY-MM-DD
 auditor: Compliance Agent
 approved_by: Legal / CEO
+timezone: Asia/Bangkok
+timestamp: YYYY-MM-DDTHH:MM:SS+07:00
+time_source: ./scripts/current_time.sh
 ---
 
 header

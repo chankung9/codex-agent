@@ -3,6 +3,9 @@ period: YYYY-MM-DD to YYYY-MM-DD
 prepared_by: HR Agent
 approved_by: CEO
 version: 1.0
+timezone: Asia/Bangkok
+timestamp: YYYY-MM-DDTHH:MM:SS+07:00
+time_source: ./scripts/current_time.sh
 ---
 
 # Weekly KPI Report — Codex-Agent Organization

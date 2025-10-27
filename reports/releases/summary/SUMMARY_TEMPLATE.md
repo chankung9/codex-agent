@@ -4,6 +4,9 @@ prepared_by: Compliance Agent
 approved_by: CEO
 period: YYYY-MM / Q#-YYYY
 last_updated: YYYY-MM-DD
+timezone: Asia/Bangkok
+timestamp: YYYY-MM-DDTHH:MM:SS+07:00
+time_source: ./scripts/current_time.sh
 ---
 
 # Release Summary Template — Codex-Agent Organization

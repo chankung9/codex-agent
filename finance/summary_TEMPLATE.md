@@ -1,8 +1,13 @@
-# Monthly Finance Summary — <Month YYYY>
+---
+prepared_by: Finance Agent
+reporting_period: YYYY-MM
+projects: hello-agent
+timezone: Asia/Bangkok
+timestamp: YYYY-MM-DDTHH:MM:SS+07:00
+time_source: ./scripts/current_time.sh
+---
 
-- **Prepared By:** Finance Agent
-- **Reporting Period:** <YYYY-MM>
-- **Projects Covered:** hello-agent
+# Monthly Finance Summary — <Month YYYY>
 
 ## 1. Executive TL;DR
 - Budget status: <under/on/over>

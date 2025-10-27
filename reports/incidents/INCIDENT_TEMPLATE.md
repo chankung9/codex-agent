@@ -4,6 +4,9 @@ created_at: YYYY-MM-DD
 updated_at: YYYY-MM-DD
 prepared_by: Engineer Agent
 approved_by: CTO / CEO
+timezone: Asia/Bangkok
+timestamp: YYYY-MM-DDTHH:MM:SS+07:00
+time_source: ./scripts/current_time.sh
 ---
 
 # Incident Report Template — Codex-Agent Organization
