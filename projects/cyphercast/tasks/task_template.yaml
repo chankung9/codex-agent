@@ -1,0 +1,10 @@
+id: cyphercast-integration-kickoff
+summary: Establish Codex ↔ cyphercast integration playbook and sync docs
+owner: product_agent
+status: pending
+links:
+  - docs/PROJECTS.md
+  - projects/cyphercast/README.md
+acceptance_criteria:
+  - Integration checklist drafted under docs/INTEGRATION_CYPHERCAST.md
+  - Doc sync diff executed against ../cyphercast and logged in audit record

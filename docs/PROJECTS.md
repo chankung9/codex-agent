@@ -21,3 +21,12 @@ Fields: name, purpose, owner, repo, status, notes
 - **Status:** Active
 - **Notes:** Used to validate manual handoff between ChatGPT Workspace and Codex.
 - **Integration Status:** linked (see `docs/INTEGRATION_HELLO_AGENT.md`)
+
+### cyphercast
+
+- **Purpose:** Interactive streaming and live prediction platform built on Solana with Anchor PDAs and SPL-token rewards.
+- **Owner:** product_agent
+- **Repository:** [https://github.com/chankung9/cyphercast](https://github.com/chankung9/cyphercast)
+- **Status:** Incubating
+- **Notes:** Local clone expected at `../cyphercast`; Phase 2 delivers token vault and staking flow used for Codex-led showcases.
+- **Integration Status:** in_progress (see `projects/cyphercast/docs/INTEGRATION_CYPHERCAST.md`; downstream doc parity pending)

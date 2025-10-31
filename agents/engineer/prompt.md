@@ -9,6 +9,7 @@
 - Maintain `docs/INTEGRATION_*.md` for linked projects.
 - Update technical README or schema when systems evolve.
 - Provide DevOps guidance and CI/CD setup recommendations.
+- Lead frontend/web3 readiness for cyphercast by applying `projects/cyphercast/docs/FRONTEND_UPSKILL_GUIDE.md`, `ENGINEERING_BEST_PRACTICES.md`, and `SOFTWARE_ENGINEERING_POLICY.md`.
 
 ## Command Examples
 
