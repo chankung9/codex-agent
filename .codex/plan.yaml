@@ -111,3 +111,97 @@ plan:
     meta:
       branch: dev
       auto_commit_branch: codex/auto
+
+  # -----------------------------------------------------
+  # NEW STEP: Cyphercast Roadmap Detail
+  # -----------------------------------------------------
+  - id: detail_cyphercast_roadmap
+    description: "Derive development roadmap and tasks for cyphercast"
+    agent: product
+    prompt: |
+      Review existing cyphercast documentation (ENGINEERING_BEST_PRACTICES.md, SOFTWARE_ENGINEERING_POLICY.md, Phase 2 docs, downstream ARCHITECTURE.md/TESTING.md) and generate a development roadmap covering:
+        1. Frontend milestones (scaffolding, wallet integration, UI polish)
+        2. On-chain alignment (program readiness, surfpool usage)
+        3. Testing strategy progression (unit → CLI/manual → integration smoke checklist)
+        4. Release handoff requirements and audit expectations.
+      - Create `projects/cyphercast/docs/DEV_ROADMAP.md` summarising phases and dependencies.
+      - Produce task YAML files (e.g., `projects/cyphercast/tasks/roadmap_<sequence>.yaml`) that itemise actionable work.
+      - Update `.codex/plan.yaml` with any new cross-team tasks and note key decisions in `audit/logs/<date>.md`.
+      Reference `projects/cyphercast/docs/INTEGRATION_SMOKE_CHECKLIST.md` to align final integration steps.
+    output: |
+      projects/cyphercast/docs/DEV_ROADMAP.md;
+      projects/cyphercast/tasks/roadmap_*.yaml;
+      .codex/plan.yaml updates; audit log entry if applicable
+    meta:
+      branch: dev
+      auto_commit_branch: codex/auto
+
+  # -----------------------------------------------------
+  # NEW STEP: Cyphercast Frontend Scaffold
+  # -----------------------------------------------------
+  - id: cyphercast_frontend_scaffold
+    depends_on: detail_cyphercast_roadmap
+    description: "Implement Phase 1 frontend scaffold for cyphercast"
+    agent: engineer
+    prompt: |
+      Execute `projects/cyphercast/tasks/roadmap_frontend_001.yaml`:
+        - Initialize the frontend application using the recommended stack (Next.js or Vite with pnpm).
+        - Configure linting, formatting, type-checking, and Storybook per engineering best practices.
+        - Establish base routes/layouts and shadcn/ui design tokens.
+      Sync documentation updates (`DEV_ROADMAP.md`, `CHANGELOG.md`) and capture doc-sync evidence.
+    output: "Frontend scaffold committed with tooling scripts; doc-sync log entry"
+    meta:
+      branch: dev
+      auto_commit_branch: codex/auto
+
+  # -----------------------------------------------------
+  # NEW STEP: Cyphercast Wallet Integration
+  # -----------------------------------------------------
+  - id: cyphercast_wallet_integration
+    depends_on: cyphercast_frontend_scaffold
+    description: "Deliver wallet adapter stack and Solana client services"
+    agent: engineer
+    prompt: |
+      Complete `projects/cyphercast/tasks/roadmap_wallet_integration_002.yaml`:
+        - Implement wallet provider using @solana/wallet-adapter with shadcn/ui modal.
+        - Create RPC/IDL helpers for Surfpool/localnet and document environment configuration.
+        - Demonstrate a sample join/predict transaction against localnet.
+      Update integration docs and log outcomes in audit records.
+    output: "Wallet integration merged with documented configuration and sample transaction evidence"
+    meta:
+      branch: dev
+      auto_commit_branch: codex/auto
+
+  # -----------------------------------------------------
+  # NEW STEP: Cyphercast Prediction UX
+  # -----------------------------------------------------
+  - id: cyphercast_prediction_ux
+    depends_on: cyphercast_wallet_integration
+    description: "Implement prediction submission and reward claim experiences"
+    agent: engineer
+    prompt: |
+      Execute `projects/cyphercast/tasks/roadmap_prediction_ux_003.yaml` to deliver stream list, prediction entry, results, and claim flows wired to the Solana program. Ensure analytics logging and accessibility compliance per engineering best practices.
+      Record successful end-to-end localnet demonstration and update roadmap documentation.
+    output: "Prediction UI flows functional on localnet with evidence in audit log"
+    meta:
+      branch: dev
+      auto_commit_branch: codex/auto
+
+  # -----------------------------------------------------
+  # NEW STEP: Cyphercast Quality & Release Readiness
+  # -----------------------------------------------------
+  - id: cyphercast_quality_release
+    depends_on: cyphercast_prediction_ux
+    description: "Harden testing pipeline and prepare release handoff"
+    agent: engineer
+    prompt: |
+      Address `projects/cyphercast/tasks/roadmap_quality_release_004.yaml`:
+        - Achieve CI coverage for lint/unit/component/Playwright suites.
+        - Execute the integration smoke checklist and log results.
+        - Update changelog, integration record, and ensure release approvals per policy.
+        - Confirm Docs Link Check workflow passes on the PR prior to merge.
+      Provide final audit entry with release readiness summary.
+    output: "Quality gates satisfied, smoke checklist executed, release evidence logged"
+    meta:
+      branch: dev
+      auto_commit_branch: codex/auto

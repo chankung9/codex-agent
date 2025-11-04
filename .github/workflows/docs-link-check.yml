@@ -8,8 +8,6 @@ on:
       - 'projects/cyphercast/scripts/check_links.sh'
       - 'projects/cyphercast/.markdown-link-check.json'
       - '.github/workflows/docs-link-check.yml'
-  schedule:
-    - cron: '0 3 * * *'
 
 jobs:
   link-check:
