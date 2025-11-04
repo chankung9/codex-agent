@@ -1,0 +1,13 @@
+id: cyphercast-quality-release
+summary: Harden testing pipeline and prepare release handoff
+owner: engineer_agent
+status: pending
+links:
+  - projects/cyphercast/docs/DEV_ROADMAP.md
+  - projects/cyphercast/docs/INTEGRATION_SMOKE_CHECKLIST.md
+  - projects/cyphercast/docs/SOFTWARE_ENGINEERING_POLICY.md
+acceptance_criteria:
+  - CI executes lint, unit, component, and Playwright integration suites with artifact retention.
+  - Integration smoke checklist executed once frontend is ready; outcomes logged in `audit/logs/<date>.md`.
+  - Release readiness documented (CHANGELOG updated, doc-sync diff clean, approvals recorded per policy).
+  - Automated link checks (`pnpm check:links` or `projects/cyphercast/scripts/check_links.sh`) run in CI and pass prior to release sign-off.

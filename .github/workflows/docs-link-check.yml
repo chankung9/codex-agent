@@ -1,0 +1,23 @@
+name: Docs Link Check
+
+on:
+  pull_request:
+    paths:
+      - 'projects/cyphercast/docs/**'
+      - 'docs/**'
+      - 'projects/cyphercast/scripts/check_links.sh'
+      - 'projects/cyphercast/.markdown-link-check.json'
+      - '.github/workflows/docs-link-check.yml'
+  schedule:
+    - cron: '0 3 * * *'
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Run link checker
+        run: ./projects/cyphercast/scripts/check_links.sh

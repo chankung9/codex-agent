@@ -1,0 +1,12 @@
+id: cyphercast-wallet-integration
+summary: Implement wallet adapter stack and Solana client services
+owner: engineer_agent
+status: pending
+links:
+  - projects/cyphercast/docs/DEV_ROADMAP.md
+  - projects/cyphercast/docs/adr/ADR-0001-wallet-adapter-stack.md
+  - projects/cyphercast/docs/ENGINEERING_BEST_PRACTICES.md
+acceptance_criteria:
+  - Wallet provider implemented using @solana/wallet-adapter with shadcn/ui modal and TestAdapter harness.
+  - RPC/IDL client utilities created (`lib/solana/*`) and validated against Surfpool/localnet with sample join/predict transaction.
+  - Environment configuration documented (SOLANA_RPC_URL, keypair handling) and synced with downstream repo.

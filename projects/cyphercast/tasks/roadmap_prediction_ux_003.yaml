@@ -1,0 +1,12 @@
+id: cyphercast-prediction-ux
+summary: Deliver prediction and reward claim experience wired to Solana program
+owner: engineer_agent
+status: pending
+links:
+  - projects/cyphercast/docs/DEV_ROADMAP.md
+  - projects/cyphercast/docs/PHASE2-IMPLEMENTATION.md
+  - projects/cyphercast/docs/rewards.md
+acceptance_criteria:
+  - Stream list, prediction entry, result view, and claim flows implemented with TanStack Query data loaders.
+  - Transactions for submit_prediction, resolve_prediction (oracle trigger), and claim_reward confirmed on localnet with UI feedback.
+  - Analytics/logging instrumentation captures stake and claim events with structured payloads.

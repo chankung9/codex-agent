@@ -41,6 +41,6 @@ This record tracks how documentation, engineering policies, and audit workflows 
 ### Next Steps
 
 1. Engineer agent: Maintain `projects/cyphercast/docs/INTEGRATION_SMOKE_CHECKLIST.md` and add the execution task to `.codex/plan.yaml` once frontend implementation begins.
-2. Product agent: Update cyphercast roadmap entries in `.codex/plan.yaml` to cover frontend build and future smoke-test execution.
+2. Product agent: Use `.codex/plan.yaml` task `detail_cyphercast_roadmap` to expand the cyphercast development roadmap and capture frontend build + smoke-test preparation milestones.
 3. Compliance agent: Review the finalized `SOFTWARE_ENGINEERING_POLICY.md` and note any security review prerequisites before smoke testing.
 4. All agents: Confirm doc-sync checklist completion has been logged and schedule the smoke-test execution once the frontend milestone is ready.

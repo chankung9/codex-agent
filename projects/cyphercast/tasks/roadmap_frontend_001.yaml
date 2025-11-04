@@ -1,0 +1,11 @@
+id: cyphercast-frontend-scaffold
+summary: Establish Next.js + Tailwind scaffold with shared tooling
+owner: engineer_agent
+status: pending
+links:
+  - projects/cyphercast/docs/DEV_ROADMAP.md
+  - projects/cyphercast/docs/ENGINEERING_BEST_PRACTICES.md
+acceptance_criteria:
+  - Next.js (or Vite) frontend initialized with pnpm workspace support and TypeScript strict mode.
+  - ESLint, Prettier, and Storybook configured per engineering best practices; CI scripts wired (`pnpm lint`, `pnpm test`, `pnpm typecheck`).
+  - Base layout routes (marketing, dashboard, stake) and shadcn/ui design tokens committed.
