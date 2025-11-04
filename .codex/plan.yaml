@@ -127,7 +127,7 @@ plan:
       - Create `projects/cyphercast/docs/DEV_ROADMAP.md` summarising phases and dependencies.
       - Produce task YAML files (e.g., `projects/cyphercast/tasks/roadmap_<sequence>.yaml`) that itemise actionable work.
       - Update `.codex/plan.yaml` with any new cross-team tasks and note key decisions in `audit/logs/<date>.md`.
-      Reference `projects/cyphercast/docs/INTEGRATION_SMOKE_CHECKLIST.md` to align final integration steps.
+      Reference `projects/cyphercast/docs/INTEGRATION_SMOKE_CHECKLIST.md` for planning alignment; actual execution occurs in the quality & release step.
     output: |
       projects/cyphercast/docs/DEV_ROADMAP.md;
       projects/cyphercast/tasks/roadmap_*.yaml;
