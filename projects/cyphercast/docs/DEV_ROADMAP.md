@@ -20,6 +20,7 @@ Use it to coordinate frontend work, align with the Solana program, and prepare t
   - Repository builds successfully (`pnpm build`) with CI lint/typecheck scripts.
   - Component playground running (Storybook) with at least wallet button mock.
   - Documentation updated under `docs/CHANGELOG.md` and doc-sync evidence recorded.
+  - ✅ 2025-11-08: Next.js + Storybook workspace scaffolded with pnpm wiring and marketing/dashboard/stake routes.
 
 ## Phase 2 — Wallet & Solana Integration Enablement
 

@@ -11,6 +11,7 @@ Follow [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) + Semantic Versi
 - ADR-0001 documenting wallet adapter stack decision.
 - Development roadmap (`DEV_ROADMAP.md`) and phased task YAMLs for frontend, wallet integration, prediction UX, and release readiness.
 - Link verification tooling (`projects/cyphercast/scripts/check_links.sh`) and policy updates requiring `pnpm check:links` in CI.
+- Next.js frontend workspace scaffolded with marketing/dashboard/stake routes, shadcn tokens, and Storybook baseline.
 
 ### Pending
 - Execute integration smoke checklist post doc-sync parity.

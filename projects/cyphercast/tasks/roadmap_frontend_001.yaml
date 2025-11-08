@@ -1,7 +1,7 @@
 id: cyphercast-frontend-scaffold
 summary: Establish Next.js + Tailwind scaffold with shared tooling
 owner: engineer_agent
-status: pending
+status: completed
 links:
   - projects/cyphercast/docs/DEV_ROADMAP.md
   - projects/cyphercast/docs/ENGINEERING_BEST_PRACTICES.md
