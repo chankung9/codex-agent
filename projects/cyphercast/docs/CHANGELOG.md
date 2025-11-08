@@ -12,6 +12,7 @@ Follow [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) + Semantic Versi
 - Development roadmap (`DEV_ROADMAP.md`) and phased task YAMLs for frontend, wallet integration, prediction UX, and release readiness.
 - Link verification tooling (`projects/cyphercast/scripts/check_links.sh`) and policy updates requiring `pnpm check:links` in CI.
 - Next.js frontend workspace scaffolded with marketing/dashboard/stake routes, shadcn tokens, and Storybook baseline.
+- Wallet adapter provider + RPC helpers added (env scaffolding, Surfpool-ready configuration).
 
 ### Pending
 - Execute integration smoke checklist post doc-sync parity.

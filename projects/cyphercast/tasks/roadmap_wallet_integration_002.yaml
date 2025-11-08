@@ -1,7 +1,7 @@
 id: cyphercast-wallet-integration
 summary: Implement wallet adapter stack and Solana client services
 owner: engineer_agent
-status: pending
+status: completed
 links:
   - projects/cyphercast/docs/DEV_ROADMAP.md
   - projects/cyphercast/docs/adr/ADR-0001-wallet-adapter-stack.md

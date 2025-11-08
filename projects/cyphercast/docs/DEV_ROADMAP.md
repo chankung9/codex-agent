@@ -34,6 +34,7 @@ Use it to coordinate frontend work, align with the Solana program, and prepare t
   - Wallet connect/disconnect flow works against TestAdapter in dev.
   - Transaction builder library submits join/predict requests to local validator (mock data acceptable).
   - Integration documentation updated; CLI quick ref referenced from UI help.
+  - ✅ 2025-11-09: Wallet adapter provider + Solana client utilities landed (see `feature/wallet-integration`).
 
 ## Phase 3 — Prediction & Claims Experience
 
